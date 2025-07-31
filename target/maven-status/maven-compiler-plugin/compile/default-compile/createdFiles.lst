@@ -1,0 +1,16 @@
+pages\DemoCartPage.class
+pages\AutomationTestingPage.class
+pages\BasePage.class
+pages\DemoPage.class
+pages\LoginPage.class
+pages\HomePage.class
+pages\OrangePage.class
+pages\Demo1Page.class
+utils\ConfigReader.class
+utils\DockerGirdManager.class
+utils\CommonUtils.class
+utils\ElementUtils.class
+pages\DemoPageTwo.class
+pages\AccountPage.class
+pages\DemoPageThree.class
+utils\ScreenshotUtil.class
