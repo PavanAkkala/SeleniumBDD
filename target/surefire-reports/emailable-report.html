@@ -9,11 +9,16 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">All Test Suite</th></tr>
-<tr><td><a href="#t0">D:/New folder (3)/BDDCucumberHybrid/BDDCucumberHybrid</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">28,197</td><td></td><td></td></tr>
+<tr><td><a href="#t0">D:/New folder (3)/BDDCucumberHybrid/BDDCucumberHybrid</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">40,372</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">All Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">D:/New folder (3)/BDDCucumberHybrid/BDDCucumberHybrid &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">runner.TestRunnerOne$TestRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="2">1753874090645</td><td rowspan="2">20433</td></tr><tr class="passedeven"><td><a href="#m1">runScenario</a></td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">All Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">D:/New folder (3)/BDDCucumberHybrid/BDDCucumberHybrid &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">runner.TestRunnerOne$TestRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1753936449642</td><td rowspan="1">39894</td></tr><tr><th colspan="4">D:/New folder (3)/BDDCucumberHybrid/BDDCucumberHybrid &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">runner.TestRunnerOne$TestRunner</td><td><a href="#m1">runScenario</a></td><td rowspan="1">1753936449642</td><td rowspan="1">13246</td></tr></tbody>
 </table>
-<h2>D:/New folder (3)/BDDCucumberHybrid/BDDCucumberHybrid</h2><h3 id="m0">runner.TestRunnerOne$TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Testing the dropdown feature&quot;</td><td>&quot;Don feature&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">runner.TestRunnerOne$TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Testing the demo feature&quot;</td><td>&quot;Demo Testing&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>D:/New folder (3)/BDDCucumberHybrid/BDDCucumberHybrid</h2><h3 id="m0">runner.TestRunnerOne$TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Testing the demo feature&quot;</td><td>&quot;Demo Testing&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebElement.getText()&quot; because &quot;webElement&quot; is null
+	at utils.ElementUtils.getTextFromElement(ElementUtils.java:106)
+	at pages.DemoPageThree.getTheText(DemoPageThree.java:39)
+	at stepdefinitions.DemoStep.getTheTextFromElement(DemoStep.java:68)
+	at ✽.get the text from element(file:///D:/New%20folder%20(3)/BDDCucumberHybrid/BDDCucumberHybrid/src/test/resources/features/Demo.feature:11)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">runner.TestRunnerOne$TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Testing the dropdown feature&quot;</td><td>&quot;Don feature&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

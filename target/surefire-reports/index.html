@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-All_Test_Suite" class="navigator-link">
-              <span class="suite-name border-passed">All Test Suite</span>
+              <span class="suite-name border-failed">All Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-All_Test_Suite" class="hide-methods failed suite-All_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-All_Test_Suite -->
+                      <a href="#" panel-name="suite-All_Test_Suite" class="show-methods failed suite-All_Test_Suite"> (show)</a> <!-- show-methods failed suite-All_Test_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-All_Test_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="runner.TestRunnerOne$TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Testing the demo feature&quot;, &quot;Demo Testing&quot;)">runScenario("Testing the demo feature", "Demo Testing")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-All_Test_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,11 +118,6 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-All_Test_Suite" title="runner.TestRunnerOne$TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Testing the dropdown feature&quot;, &quot;Don feature&quot;)">runScenario("Testing the dropdown feature", "Don feature")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-All_Test_Suite" title="runner.TestRunnerOne$TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Testing the demo feature&quot;, &quot;Demo Testing&quot;)">runScenario("Testing the demo feature", "Demo Testing")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-All_Test_Suite -->
@@ -123,6 +132,31 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-All_Test_Suite" class="panel All_Test_Suite">
+          <div class="suite-All_Test_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">runner.TestRunnerOne$TestRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Testing the demo feature&quot;, &quot;Demo Testing&quot;)">
+                  </a> <!-- runScenario("Testing the demo feature", "Demo Testing") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Testing the demo feature","Demo Testing")</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebElement.getText()&quot; because &quot;webElement&quot; is null
+	at utils.ElementUtils.getTextFromElement(ElementUtils.java:106)
+	at pages.DemoPageThree.getTheText(DemoPageThree.java:39)
+	at stepdefinitions.DemoStep.getTheTextFromElement(DemoStep.java:68)
+	at ✽.get the text from element(file:///D:/New%20folder%20(3)/BDDCucumberHybrid/BDDCucumberHybrid/src/test/resources/features/Demo.feature:11)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-All_Test_Suite-class-failed -->
           <div class="suite-All_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -135,16 +169,6 @@
                   </a> <!-- runScenario("Testing the dropdown feature", "Don feature") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Testing the dropdown feature","Don feature")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Testing the demo feature&quot;, &quot;Demo Testing&quot;)">
-                  </a> <!-- runScenario("Testing the demo feature", "Demo Testing") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Testing the demo feature","Demo Testing")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -216,16 +240,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'runner.TestRunnerOne$TestRunner')
-data.setCell(0, 3, 27661);
+data.setCell(0, 3, 39894);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'runner.TestRunnerOne$TestRunner')
-data.setCell(1, 3, 20433);
+data.setCell(1, 3, 13246);
 window.suiteTableData['All_Test_Suite']= { tableData: data, tableDiv: 'times-div-All_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 28 seconds</span>
+              <span class="suite-total-time">Total running time: 40 seconds</span>
               <div id="times-div-All_Test_Suite">
               </div> <!-- times-div-All_Test_Suite -->
             </div> <!-- times-div -->
@@ -253,20 +277,22 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">runner.TestRunnerOne$TestRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@762ef0ea)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@3754a4bf)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">runScenario("Testing the dropdown feature", "Don feature")</span>
-                <span class="method-start">481 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Testing the demo feature", "Demo Testing")</span>
+                <span class="method-start">421 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("Testing the demo feature", "Demo Testing")</span>
-                <span class="method-start">481 ms</span>
+                <span class="method-name">runScenario("Testing the dropdown feature", "Don feature")</span>
+                <span class="method-start">421 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">28143 ms</span>
+                <span class="method-start">40318 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

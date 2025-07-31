@@ -1,4 +1,11 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 28.79 s -- in TestSuite
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 40.95 s <<< FAILURE! -- in TestSuite
+runner.TestRunnerOne$TestRunner.runScenario["Testing the demo feature", "Demo Testing"](2) -- Time elapsed: 39.90 s <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.getText()" because "webElement" is null
+	at utils.ElementUtils.getTextFromElement(ElementUtils.java:106)
+	at pages.DemoPageThree.getTheText(DemoPageThree.java:39)
+	at stepdefinitions.DemoStep.getTheTextFromElement(DemoStep.java:68)
+	at ✽.get the text from element(file:///D:/New%20folder%20(3)/BDDCucumberHybrid/BDDCucumberHybrid/src/test/resources/features/Demo.feature:11)
+
