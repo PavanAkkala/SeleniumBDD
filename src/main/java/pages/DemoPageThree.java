@@ -27,7 +27,6 @@ public class DemoPageThree extends BasePage {
     public void clickOnWindowElement() throws InterruptedException {
 
         elementUtils.clickOnElement(window,10);
-       // elementUtils.switchToNewWindow(1);
         elementUtils.switchToNewWindow(1);
         driver.manage().window().maximize();
         Thread.sleep(5000);
